@@ -9,7 +9,7 @@ jobs:
       - name: First Step
         uses: actions/checkout@v4
       - name: Install Tree
-        uses: apt install tree -y
+        uses: sudo apt install tree -y
       - name: Investigate Repo
         run: |
           pwd
