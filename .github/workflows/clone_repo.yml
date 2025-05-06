@@ -7,7 +7,8 @@ jobs:
 
     steps:
       - name: First Step
-        uses: actions/checkout@v4
+        run: git clone https://github.com/Hibrar/webdev_website.git
+#        uses: actions/checkout@v4
       - name: Install Tree
         run: sudo apt install tree -y
       - name: Investigate Repo
