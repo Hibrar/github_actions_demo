@@ -1,0 +1,16 @@
+name: GitHub CUSTOM Actions
+on: workflow_dispatch
+
+jobs:
+  on-push-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First Step
+        uses: actions/checkout@v4
+      - name: Investigate Repo
+        run: |
+            pwd
+          ls -lart
+          cd./github_actions_demo
+          ls -lart
