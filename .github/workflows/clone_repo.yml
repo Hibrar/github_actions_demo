@@ -1,4 +1,4 @@
-name: GitHub CUSTOM Actions
+name: GitHub Custom Actions
 on: workflow_dispatch
 
 jobs:
@@ -9,7 +9,7 @@ jobs:
       - name: First Step
         uses: actions/checkout@v4
       - name: Install Tree
-        uses: sudo apt install tree -y
+        run: sudo apt install tree -y
       - name: Investigate Repo
         run: |
           pwd
