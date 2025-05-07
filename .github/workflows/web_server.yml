@@ -16,10 +16,11 @@ jobs:
         run: |
           sudo systemctl enable nginx
           sudo systemctl start nginx
+      - name: Check Nginx Server
+        run: sudo systemctl status nginx
       - name: Test Web Service
-        run: curl localhost:80
-        # python3 -c "import requests; r=requests.get('http://localhost:8080');print(r.status.code)"
-
+        run: python3 -c "import requests; r=requests.get('http://localhost:80');print(r.status.code)"
+# curl localhost:80
 
 #git add .
 #git commit -m "new yaml workflow"
