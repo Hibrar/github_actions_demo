@@ -3,7 +3,10 @@ on:
   workflow_dispatch:
   pull_request:
     types: [opened, synchronize]
-
+  push:
+    branches:
+      - 'dev*'
+      - main
 jobs:
   demo-example:
     runs-on: ubuntu-latest
