@@ -9,7 +9,7 @@ jobs:
       - name: Git Clone Repo
         run: git clone https://github.com/Hibrar/webdev_website
       - name: Move Website Files
-        run: sudo mv ./website/* /usr/share/nginx/html/
+        run: sudo mv ./webdev_website/* /usr/share/nginx/html/
       - name: Check Website Files
         run: ls -lart /usr/share/nginx/html/
       - name: Start and EnableNginx Service
@@ -19,7 +19,7 @@ jobs:
       - name: Check Nginx Server
         run: sudo systemctl status nginx
       - name: Test Web Service
-        run: python3 -c "import requests; r=requests.get('http://localhost:80');print(r.status.code)"
+        run: python3 -c "import requests; r=requests.get('http://localhost:80'); print(r.status.code)"
 # curl localhost:80
 
 #git add .
