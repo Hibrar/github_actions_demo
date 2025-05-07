@@ -10,8 +10,14 @@ jobs:
       - run: git clone https://github.com/Hibrar/webdev_website.git
       - name: Check Website Files
         run: ls -lart
+      - name: Move Website Files
+        run: sudo mv ./NG-Website/* /usr/share/nginx/html/
+      - name: Start Nginx Service
+        run: sudo systemctl start nginx
+      - name: Test Web Service
+        run: python3 -c "import requests; r=requests.get('http://localhost:8080');print(r.status.code)"
 
 
-git add .
-git commit -m "new yaml workflow"
-git push -u origin3
+#git add .
+#git commit -m "new yaml workflow"
+#git push -u origin3
