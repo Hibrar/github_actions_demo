@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Ping The Service
-        run: ping 8.8.8.8 -n 100
+        run: ping 8.8.8.8 -n 7
 #git add .
 #git commit -m "new yaml workflow"
 #git push -u origin3
