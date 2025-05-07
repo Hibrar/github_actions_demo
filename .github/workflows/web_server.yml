@@ -7,7 +7,7 @@ jobs:
 
     steps:
       - name: Git Clone Repo
-        run: git clone https://github.com/Hibrar/webdev_website.git
+        run: git clone https://github.com/Hibrar/webdev_website
       - name: Move Website Files
         run: sudo mv ./website/* /usr/share/nginx/html/
       - name: Check Website Files
