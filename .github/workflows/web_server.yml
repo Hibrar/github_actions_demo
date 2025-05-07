@@ -21,7 +21,7 @@ jobs:
       - name: Test Web Service
         run: python3 -c "import requests; r=requests.get('http://localhost:80'); print(r.status_code)"
 # curl localhost:80
-x
+
 #git add .
 #git commit -m "new yaml workflow"
 #git push -u origin3
