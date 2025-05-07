@@ -1,0 +1,17 @@
+name: Deploying Multiple Runners
+on: workflow_dispatch
+
+jobs:
+  clone-website-and-run-podman:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Clone Repo
+      - run: git clone https://github.com/Hibrar/webdev_website.git
+      - name: Check Website Files
+        run: ls -lart
+
+
+git add .
+git commit -m "new yaml workflow"
+git push -u origin3
